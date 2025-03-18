@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/checklist.png">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>What Is Your Main Goal For Today?</h1>
+        </header>
+
+        <main class="main" id="main">
+            <h2>My To-Do List!
+                <img src="images/todolist.png" alt="To Do List Icon" width="40" height="40">
+            </h2>
+        
+            <form class="new-task" id="new-task-form">
+                <input autofocus placeholder="Add Task Here" required type="text" id="input-new-task">
+                <button id="add-task-btn" type="button">Add</button>
+            </form>
+
+            <div class="find-task-container">
+                <input placeholder="Find Task Here" required type="text" id="input-find-task">
+                <button id="find-task-btn" type="button">Find</button>
+            </div>
+
+            <ol class="task-item" id="task-item">
+                <li>
+                    <div class="experi">
+                        <span>task 1 Example</span>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </li>
+            </ol>
+        </main>
+
+        <div class="empty-container"></div>
+
+        <footer class="footer">
+            <p>&copy; 2025 SAM</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

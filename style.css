@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(135deg, #143D60, #4e085f);
+    font-family: 'Times New Roman', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    width: 100%;
+}
+
+.header {
+    color: #A0C878;
+    justify-content: center;
+    text-align: center;
+}
+
+h2 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 0.5em 0 1em 0;
+}
+
+.main {
+    background-color: #DDEB9D;
+    background-image: radial-gradient(circle 90em at center, #DDEB9D, #A0C878, transparent);
+    border-radius: 0.5em;
+    color: #143D60;
+    margin: auto;
+    padding: 1.5em;
+    width: 70%;
+    margin-bottom: 1em;
+}
+
+form {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: relative;
+}
+
+input {
+    border-color: transparent;
+    border-radius: 2em;
+    font-family: auto;
+    font-weight: 500;
+    padding: 0.75em;
+    padding-right: 5.5em;
+    width: 100%;
+}
+
+.find-task-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0.20em;
+    position: relative;
+    width: 100%;
+}
+
+button {
+    background-color: #143D60;
+    border: none;
+    border-radius: 2em;
+    color: #DDEB9D;
+    cursor: pointer;
+    font-family: auto;
+    font-weight: bold;
+    padding: 0.9em 2em;
+    position: absolute;
+    right: 0;
+    transition: background-color 0.5s ease;
+    outline: none;
+}
+
+button:hover {
+    background-color: green;
+    font-weight: bold;
+    color: white;
+}
+
+button:focus,
+input:focus {
+    color: #27667B;
+    outline: none;
+}
+
+li {
+    display: flex;
+    padding: 1em;
+    margin: 0.5em;
+    width: 80%;
+    position: relative;
+    background-color: #DDEB9D;
+    font-family: auto;
+    color: #27667B;
+    border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+    border-left-style: solid;
+}
+
+.empty-container {
+    content: '';
+    display: flex
+;
+    height: 20em;
+}
+
+.footer {
+    border-top: dotted;
+    color: #A0C878;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 2rem;
+}

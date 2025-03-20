@@ -1,51 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/checklist.png">
 </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <h1>What Is Your Main Goal For Today?</h1>
-        </header>
-
-        <main class="main" id="main">
-            <h2>My To-Do List!
-                <img src="images/todolist.png" alt="To Do List Icon" width="40" height="40">
-            </h2>
-        
-            <form class="new-task" id="new-task-form">
-                <input autofocus placeholder="Add Task Here" required type="text" id="input-new-task">
-                <button id="add-task-btn" type="button">Add</button>
-            </form>
-
-            <div class="find-task-container">
-                <input placeholder="Find Task Here" required type="text" id="input-find-task">
-                <button id="find-task-btn" type="button">Find</button>
+    <main class="container">
+        <div class="todo-app">
+            <h2>To-Do List <img src="images/task.png"></h2>
+            <div class="row">
+                <form id="input-form">
+                    <input autofocus type="text" id="input-box" placeholder="Add your text.">
+                    <button onclick="addTask()">Add</button>
+                </form>
             </div>
 
-            <ol class="task-item" id="task-item">
-                <li>
-                    <div class="experi">
-                        <span>task 1 Example</span>
-                        <button>Edit</button>
-                        <button>Delete</button>
-                    </div>
-                </li>
-            </ol>
-        </main>
+            <ul id="list-container"></ul>
+        </div>
+    </main>
 
-        <div class="empty-container"></div>
-
-        <footer class="footer">
-            <p>&copy; 2025 SAM</p>
-        </footer>
-    </div>
-
+    <footer>
+        <p>&copy; SAM, 2025</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

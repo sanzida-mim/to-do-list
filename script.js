@@ -1,35 +1,44 @@
-function GEBID(id) {
-    return document.getElementById(id);
+const inputForm = document.getElementById('input-form');
+const inputBox = document.getElementById('input-box');
+const listContainer = document.getElementById('list-container');
+
+inputForm.addEventListener('submit', addTask);
+
+function addTask(e) {
+    e.preventDefault();
+
+    if(inputBox.value === '') {
+        alert('You must write something first!');
+    } else{
+        let li = document.createElement('li');
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        
+        let span = document.createElement('span');
+        span.innerHTML = '\u00d7';
+        li.appendChild(span);
+    }
+
+    inputBox.value = '';
+    saveTask();
 }
 
-function CE(id) {
-    return document.createElement(id);
+listContainer.addEventListener('click', function(evnt) {
+    if(evnt.target.tagName == 'LI') {
+        evnt.target.classList.toggle('checked');
+        saveTask();
+    } else if (evnt.target.tagName == 'SPAN') {
+        evnt.target.parentElement.remove();
+        saveTask();
+    }
+}, false);
+
+function saveTask() {
+    localStorage.setItem('tasks', listContainer.innerHTML);
 }
 
-const taskInputForm = GEBID('new-task-form');
-const newInputTask = GEBID('input-new-task');
-const taskList = GEBID('task-item');
-
-taskInputForm.addEventListener('submit', addNewTask);
-
-function addNewTask(evnt) {
-    evnt.preventDefault();
-
-    let taskListItem = CE('li');
-	let taskSpan = CE('span');
-	let taskActions = CE('div');
-	let taskEdit = CE('button');
-	let taskDelete = CE('button');
-
-    taskListItem.appendChild(taskSpan);
-    taskListItem.appendChild(taskActions);
-    taskActions.appendChild(taskEdit);
-    taskActions.appendChild(taskDelete);
-	taskList.appendChild(taskListItem);
-
-    taskSpan.innerText = newInputTask.value;
-
-    taskInputForm.reset();
+function showTask() {
+    listContainer.innerHTML = localStorage.getItem('tasks');
 }
 
-taskSpan.innerText = newInputTask.value;
+showTask();
